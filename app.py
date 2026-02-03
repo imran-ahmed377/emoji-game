@@ -15,6 +15,7 @@ pygame.init()
 display.set_caption('My Game')
 screen = display.set_mode((gc.SCREEN_SIZE, gc.SCREEN_SIZE))
 matched = image.load('other_assets/matched.png')
+matched = pygame.transform.scale(matched, (gc.SCREEN_SIZE, gc.SCREEN_SIZE))
 running = True
 tiles = [Animal(i) for i in range(0, gc.NUM_TILES_TOTAL)]
 current_images_displayed = []
